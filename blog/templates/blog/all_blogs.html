@@ -1,0 +1,12 @@
+<h1>Blog</h1>
+
+<h2>Vanessa has written {{ blogs.count }} blogs</h2>
+
+{% for blog in blogs %}
+
+    <a href="{%  url 'blog:detail' blog.id %}"><h2>{{ blog.title }}</h2></a>
+    <p>{{ blog.description }}</p>
+    <br>
+    <p>{{ blog.date }}</p>
+
+{% endfor %}
